@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         countDownTimer = new CountDownTimer(endTime1, 1000) {
 
             public void onTick(long millisecondsUntilDone) {
+                if(endTime1 == 0) displayTimesUp();
                 NumberFormat f = new DecimalFormat("00");
                 millisecondsUntilDone = endTime1;
                 long min = (millisecondsUntilDone/60000) % 60;
@@ -95,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         countDownTimer2 = new CountDownTimer(endTime2, 1000) {
 
             public void onTick(long millisecondsUntilDone) {
+                if(endTime2 == 0) displayTimesUp();
                 NumberFormat f = new DecimalFormat("00");
                 millisecondsUntilDone = endTime2;
                 long min = (millisecondsUntilDone/60000) % 60;
